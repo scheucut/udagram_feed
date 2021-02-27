@@ -3,7 +3,7 @@ import {config} from './config/config';
 
 
 // Configure AWS
-if(config.aws_profile !== "DEPLOYED") {  
+if(config.aws_profile != "DEPLOYED") {  
   const credentials = new AWS.SharedIniFileCredentials({profile: config.aws_profile});
   AWS.config.credentials = credentials;
 }
